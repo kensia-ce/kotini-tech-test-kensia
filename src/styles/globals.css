@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --kotini-green: #00a69a;
+  --kotini-green-adjusted: #068a85;
+  --kotini-red: #d63f3f;
+  --kotini-yellow: #ffd171;
+  --kotini-black: #1c1330;
+  --kotini-pink: #ffc8c8;
+  --kotini-dark-green: #064550;
+  --kotini-white: #fff;
+  --background-0: #e3f4f3;
+  --background-1: #caebe9;
+  --background-2: #b0e2df;
+  --background-3: #80d1cb;
+  --background-4: #66c8c0;
+  --background-5: #4dbfb6;
+  --background-6: #33b8ae;
+  --background-7: #1aafa4;
+  --shade-0: #e8e7ea;
+  --shade-1: #d2d0d6;
+  --shade-2: #bbb8c1;
+  --shade-3: #a4a1ac;
+  --shade-4: #8e8998;
+  --shade-5: #777183;
+  --shade-6: #605a6e;
+  --shade-7: #494259;
+  --shade-8: #332b45;
+  --transparent-light: #ffffff55;
+  --transparent-dark: #1c133055;
+  --transparent-green: #00a69a19;
+  --red: var(--kotini-red);
+  --pink: var(--kotini-pink);
+  --green: var(--kotini-green);
+  --primary-background: var(--kotini-green);
+  --primary-foreground: #fff;
+  --primary-adjusted: var(--kotini-green-adjusted);
+  --secondary-background: var(--kotini-black);
+  --secondary-foreground: #fff;
+  --tertiary-background: transparent;
+  --tertiary-foreground: var(--kotini-green);
+  --inactive-background: var(--background-2);
+  --inactive-foreground: var(--background-4);
+  --inactive-secondary-background: var(--shade-1);
+  --inactive-secondary-foreground: var(--shade-5);
+  --button-background: #fff;
+  --button-foreground: var(--kotini-black);
+  --progress-background-primary: var(--background-5);
+  --progress-background-secondary: var(--shade-7);
+  --notification-good: var(--kotini-green);
+  --notification-bad: var(--kotini-red);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--kotini-black);
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--background-0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4%;
+}
+
+article {
+  background-color: var(--background-2);
+  z-index: 10;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  box-sizing: border-box;
+  padding: 32px;
+  margin: 4% 8%;
+  border-radius: 45px;
+}
+
+input {
+  font-family: "Outfit", sans-serif;
+  display: block;
+  border: none;
+  font-weight: 300;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1;
+  border-radius: 32px;
+  outline: none;
+  min-width: 300px;
+  font-size: 16px;
+  padding: 0 32px;
+  height: 64px;
+  margin: 10px 0;
+  color: var(--kotini-green);
+}
+
+button {
+  width: 100%;
+  border-radius: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 20px 0;
+  border: none;
+  overflow: hidden;
+  font-size: 16px;
+  padding: 16px;
+  height: 64px;
+  color: var(--primary-foreground);
+  background-color: var(--primary-background);
+  fill: var(--primary-foreground);
+}
+
+span {
+  font-size: 12px;
+  color: var(--kotini-red);
+}
+
+h3 {
+  text-align: center;
+  font-size: 64px;
+}
