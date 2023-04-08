@@ -1,38 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Kotini Tech Test - Frontend (Ken Sia) - Prompt
 
-## Getting Started
+### Introduction
 
-First, run the development server:
+Think of this as an open-source project. How would this have to look in order for you to be impressed with it if you were to find it on GitHub?
+
+Please spend at least 90 minutes on this test. Feel free to take more time if you wish - make sure you are happy with your submission!
+
+Hint: we are looking for a high-quality submission with great application architecture. Not a "get it done" approach.
+
+Hint: We want to give our users a great experience, consider this when styling the UI - we don't want plain html elements.... show us what you can do.
+
+Hint: Remember that this test is your opportunity to show us how you think and what you know. Be clear about how you make decisions in your code, whether that is with comments, tests, or how you name things.
+
+### Challenge
+
+Create a "Loan to Value Calculator" that accepts a depositValue (int) and purchasePrice (int) as inputs. Use the below graphql API to fetch and display the result: https://gateway.kotini.co/graphql
+
+## Running the app locally
+
+First, install all npm packages
+
+```bash
+npm install
+```
+
+Then run the development version of the app
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application in action.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Running the end-to-end test using Cypress
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+First, run the app on your [http://localhost:3000](http://localhost:3000)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Then, open a new terminal and run the e2e script to Open Cypress (make sure cypress is installed)
+
+```bash
+npm run e2e
+```
+
+## Running the Static Code Analysis check
+
+The project uses ESLint and Prettier to ensure code consistency, ESLint plugins and code styleguide used can be found in the follwing files.
+
+```bash
+.eslint.json
+.prettier.rc
+```
+
+Run the ESLint check
+
+```bash
+npm run lint
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js](https://nextjs.org/docs) - React Framework using Typescript
+- [Formik](https://formik.org/) - Form Library
+- [Yup](https://github.com/jquense/yup) - Form Validation
+- [Axios](https://axios-http.com/docs/intro) - HTTP Client
+- [Cypress](https://www.cypress.io/) - End-to-End Testing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### File Structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `.next` (this contains the built files after running `npm run build` command)
+- `.vscode` (this contains project specific ESLint and prettier configuration for VS Code)
+- `cypress` (this contains all e2e specs and config)
+- `public` (this contains the assets/images being used in the app)
+- `src` (main source code)
+  - `components` (this contains the react functional components)
+  - `pages` (this contains pages which is by default serves as the routing since Nextjs uses file-system based routing)
+  - `services` (this contains services that will interact with the GraphQL API)
+  - `styles` (this contains the global styles for the app, since the app is just 1 component for now)
